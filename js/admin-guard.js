@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",async()=>{const roles=(document.body.dataset.roles||"").split(",").filter(Boolean);if(!roles.length)return;try{const p=await AuthService.requireRole(roles);if(p)document.querySelectorAll("[data-profile-name]").forEach(el=>el.textContent=p.full_name||p.role)}catch(e){console.error(e)}});
