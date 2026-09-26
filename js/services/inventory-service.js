@@ -1,0 +1,1 @@
+window.InventoryService={async forProduct(productId){const db=StoreDB.getClient();if(!db)return null;const{data,error}=await db.from('stock').select('*').eq('product_id',productId);if(error)throw error;return data}};

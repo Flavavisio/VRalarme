@@ -1,0 +1,7 @@
+-- Security Store / Vralarmes
+-- Reference schema note: the connected Supabase project already contains the production-oriented schema.
+-- Core tables detected: roles, permissions, role_permissions, profiles, brands, categories, suppliers, products,
+-- product_images, product_documents, category_attributes, product_attributes, product_relations, supplier_products,
+-- countries, tax_rates, product_prices, customer_groups, discount rules, customers, addresses, carts, orders,
+-- order_items, order_status_history, stock, stock_movements, imports and audit_logs.
+-- RLS is enabled on these tables. Use migrations against the live schema rather than recreating tables from V3/V4.
