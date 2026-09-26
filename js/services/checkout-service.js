@@ -1,0 +1,1 @@
+window.CheckoutService={async createOrder(cart){const db=StoreDB.getClient();if(!db)throw new Error('Supabase não configurado.');const items=cart.map(x=>({product_id:x.id,quantity:x.qty}));const{data,error}=await db.rpc('create_order',{p_items:items,p_reservation_minutes:15});if(error)throw error;return data}};

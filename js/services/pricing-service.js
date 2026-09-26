@@ -1,0 +1,1 @@
+window.PricingService={async price(productId){const db=StoreDB.getClient();if(!db)return null;const{data,error}=await db.from('product_prices').select('*').eq('product_id',productId).maybeSingle();if(error)throw error;return data}};
